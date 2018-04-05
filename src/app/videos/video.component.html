@@ -1,0 +1,301 @@
+<div style="text-align:center">
+  <h3>
+    Здесь вы можете найти все мои видео
+
+    <br/>
+    <button class="anekdot" (click)="loadAnekdot()"> Нажми и получи случайный анекдот:</button>
+    <br/>
+
+  
+      <!-- <audio id="audio1" controls="">
+        <source src="../../assets/greetingRodion.ogg" type="audio/ogg">
+      </audio>
+      <audio id="audio2" controls="">
+        <source src="../../assets/greetingNina.ogg" type="audio/ogg">
+      </audio> -->
+
+      
+  
+ 
+
+    <!-- <textarea class="anekdotBody" cols='66%' [style.height.px]='getStyle()' [value]="anekdot" readonly='true'>
+   
+  </textarea> -->
+    {{anekdot}}
+
+
+    <div *ngIf="show">
+      <img [src]="itemsImages" alt="" height="30%" width="40%">
+
+
+      <!-- <img src="../../assets/im.gif"/> -->
+
+
+
+    </div>
+
+
+    <h2>Список видео</h2>
+
+
+
+    <!-- <button (click)="loadArticle()"> Добавить статью </button>
+    <br>
+
+    <textarea name="title" class="input" [(ngModel)]='title' cols='100%' [style.height.px]=30 placeholder="Название статьи">  </textarea>
+    <br>
+    <textarea name="input" class="input" [(ngModel)]='article' cols='100%' [style.height.px]=100 placeholder="Содержание статьи">  </textarea>
+
+
+    <textarea name="input" class="input" [(ngModel)]='url' cols='100%' [style.height.px]=100 placeholder="url">  </textarea> -->
+
+
+    <!-- <div chAccoridon #firstAccordion="accordion" onlyOneOpen="false">
+
+
+      <div>
+        <ul>
+          <li class="text" *ngFor="let item of items  | async">
+
+            <panel title='{{(item)?.title}}'>
+
+              <!-- <div>{{(item)?.title }} </div> -->
+    <!--             
+              <p> {{(item)?.content}} </p>
+              {{item?.url}}
+              <iframe width="66%" height="315" src={{item?.url}} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <br/>
+            </panel>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+
+
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div chAccoridon #firstAccordion="accordion" onlyOneOpen="true">
+
+          <panel title="Обиды обидные -это стресс- это невроз!">
+            <p>К сожалению, советы забыть, простить, не думать -не работают. Обида- это психотравма, стресс. Кратковременный
+              , если справился сразу или долговременный, который ведет к неврозу , к возникновению комплексов. Поэтому и
+              ребенка и себя нужно воспитывать стрессоустойчивым.</p>
+            <iframe width="70%" height="315" src="https://www.youtube.com/embed/mABclWASucs" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+
+          <panel title="Прогулки на свежем воздухе">
+            <p>Прогулки нормализуют настроения. память, сон, помогают снять стресс. Пять тысяч шагов в день! Ставьте цели, меняйте
+              маршруты! носите удобную обувь. После сытного обеда лучше прогуляться</p>
+            <iframe width="70%" height="315" src="https://www.youtube.com/embed/zGT3fe-sY1I" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+
+          <panel title="Ловушки алкололя. Заблуждения алкоголиков">
+            <p> Кто не курит и не пьет , тот здоровым проживет! Не умеешь пить, закусывай, культурно отдыхаем, ты что - не мужик?
+              Не сотвори себе кумира, доверяй научным достижениям, а не мнению соседа-алкоголика!</p>
+            <iframe width="70%" height="315" src="https://www.youtube.com/embed/Ws-JeEQ_Zkw" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+
+          <panel title="Лень и безволие, что делать?">
+            <p>Человек не рождается ленивым, дети активны, но волевые качества приобретаются в течении жизни. Как воспитывать
+              в себе и детях силу воли. Что такое апатоабулический синдром</p>
+            <iframe width="70%" height="315" src="https://www.youtube.com/embed/LaEIKEAfR0g" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+          <panel title="Плохое настроение, печалька, уныние">
+            <p>исключить начало депрессии, заболеваний щитовидной железы и т д , Работать над собой, благодарность за то , что
+              есть, научиться настраиваться на хорошую волну, включать силу воли, быть властелином эмоций. Плохое настроение
+              ведет к лени, апатии. безволию, деградации</p>
+            <iframe width="70%" height="315" src="https://www.youtube.com/embed/QdtiUih1_C4" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+          <panel title="Неблагодарность. Что имею не ценю.">
+            <p>Что имею не ценю, потеряю плачу. Неблагодарность - причина многих бед и пороков. Вы плачете, жалуетесь? Посетите
+              онкодиспансер, интернат для детей с различными нарушениями , лепрозорий, ожоговый центр, и вы почувствуете
+              себя счастливцем, ужаснетесь , каким неблагодарным вы были еще час назад. Может это шанс достичь большего?</p>
+            <iframe width="70%" height="315" src="https://www.youtube.com/embed/WCrJL3KX2LI" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+
+
+
+
+
+          <panel title="Мое видео о вреде курения. Стань лидером! Ты еще куришь?">
+            <p> Мое видео о вреде курения. Стань лидером! Ты еще куришь? Когда ты закомплесован, не умеешь убеждать, не знаешь
+              куда деть руки, боишься быть не как все, отстоять свое мнение, безволен!
+            </p>
+            <iframe width="66%" height="315" src="https://www.youtube.com/embed/Zat0dqp3E2Q" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+          <panel title="Причины набора веса">
+            <p>Причины набора веса, быстрые и медленные углеводы, частый прием пищи через 3-4 часа, диеты, образ жизни, физическая
+              активность, белки , жиры, углеводы, постройнеть.</p>
+
+            <br/>
+            <iframe width="66%" height="315" src="https://www.youtube.com/embed/pHU8DvonjiM" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+
+
+          <panel title="Опасность диет">
+            <p> Опасность диет, виды диет, безуглеводная, рисовая, овощная, фруктовая, кефирная, здоровые продукты, полноценное
+              питание, иммунитет, иммуноглобулины, пищевые добавки, фаст-фуд, состояние сытости.</p>
+            <br/>
+            <iframe width="66%" height="315" src="https://www.youtube.com/embed/-B9B4TSBnsk" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+
+          </panel>
+
+
+
+          <panel title="физическая активность, мышечная радость">
+            <p> физическая активность, мышечная радость, снятие усталости , расслабление, переключение, привлекательность мужчин
+              и женщин</p>
+
+            <iframe width="66%" height="315" src="https://www.youtube.com/embed/H7G_J0m3CxE" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+
+          </panel>
+
+
+
+
+          <panel title="Виды зависимости, нейромедиатор дофамин, привыкание">
+            <p>Виды зависимости, нейромедиатор дофамин, привыкание, пристрастие, установки социума, центры удовольствия в лимбической
+              системе мозга</p>
+
+            <iframe width="66%" height="315" src="https://www.youtube.com/embed/8pixsCskgaA" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+
+          <panel title="Польза или вред вина">
+
+            <p>Польза или вред вина, токсины, ресвератрол, алкоголизм, привыкание, зависимость, этиловый спирт, кетоновые тела,
+              уксусный альдегид, заблуждение, самообман, интоксикация</p>
+
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/xZk22e1V3yE" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+
+          </panel>
+
+          <panel title="Здоровый завтрак для мужчин и женщин">
+            <p>Здоровый завтрак для мужчин и женщин, быстрые и медленные углеводы, незаменимые аминокислоты</p>
+            <br/>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/rjSISB55PtI" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+
+
+
+          </panel>
+          <panel title="208 млн больных алкоголизмом в 2010г, продукты распада спирта">
+            <p>208 млн больных алкоголизмом в 2010г, продукты распада спирта, кетоновые тела, ацетон, ацетоуксусная к-та, бетаоксимасляная
+              к-та, интоксикация, последствия</p>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/FvqwzXPQNTc" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+
+          </panel>
+          <panel title="Традиции застолья, неосведомленность, детоксикация, врач-нарколог, психолог">
+
+            <p>Традиции застолья, неосведомленность, детоксикация, врач-нарколог, психолог</p>
+
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/kY8D71MNYzo" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+
+          </panel>
+
+          <panel title="не зацикливаться на конфликтах">
+            <p>не зацикливаться на конфликтах</p>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/78PQfMdnqwc" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+
+
+          </panel>
+          <panel title="манипуляторы и интриганы">
+
+            <p>манипуляторы и интриганы</p>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/13SiypFrNas" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+
+
+          </panel>
+          <panel title="легко просыпаемся и встаем">
+            <p>легко просыпаемся и встаем</p>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/ylqrPbeYnFU" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+
+          <panel title="любовь на всю жизнь">
+            <p>любовь на всю жизнь</p>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/_yCHwBbNCok" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+
+          </panel>
+          <panel title="советоваться и советовать">
+            <p>советоваться и советовать</p>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/hp2XADbSmWQ" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+          <panel title="хвалить , критиковать, нужна ли такая правда,">
+            <p>хвалить , критиковать, нужна ли такая правда, комплексы неполноценности, доброе слово , вдохновлять</p>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/3MhA4NaQhHM" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+
+
+          <panel title="Стоит ли отвечать на некоторые вопросы">
+            <p>Стоит ли отвечать на некоторые вопросы</p>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/WvWxJpySqFM" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+          </panel>
+          <panel title="Критиковать, ругать или похвалить?">
+            <p>Критиковать, ругать или похвалить? шеф, руководитель самодур или хочет как лучше</p>
+            <iframe width="60%" height="315" src="https://www.youtube.com/embed/apnvEbRZgts" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+            <br/>
+
+          </panel>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </h3>
+</div>

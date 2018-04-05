@@ -1,0 +1,75 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+
+
+<div class="content" (scroll)="detectScroll()">
+  <h2>
+   
+      <div *showItDevice="['desktop','tablet']">
+       
+        
+    <ul class="nav navbar">
+      <li routerLinkActive="active">
+        <a routerLink='allVideos' class="link">Bидео</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink='allArticles' class="link">Cтатьи</a>
+      </li>
+     
+      <li routerLinkActive="active">
+        <a routerLink='anekdots'> Случайный анекдот</a>
+      </li>
+      <li routerLinkActive="active">
+        <a href="https://www.youtube.com/channel/UCy6EhA3WZWnFjB91wJbBozQ"> Мой youtube канал </a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink='external'> Случайный анекдот</a>
+      </li>
+      <li routerLinkActive="active">
+        <input name="changer" class="search" id="123" placeholder="Поиск " (ngModel)="input" (ngModelChange)="process($event)" />
+      </li>
+    </ul>
+
+  </div>
+
+
+  <div *showItDevice="['mobile','desktop','tablet']" >
+ 
+
+    <div class="dropdown">
+      <button id="menu" class ="menu" cols="30%" >Menu</button>
+      <div id="contentMenu" class="dropdown-content" (click)="hideElements()">
+       
+         
+            <a class="video" routerLink='allVideos' class="link" >Bидео</a>
+       
+         <br/>
+            <a class="article" routerLink='allArticles' class="link" >Cтатьи</a>
+             
+            <br/>
+        
+            <a class="anekdot" routerLink='anekdots' class="link"  >Случайный анекдот</a>
+            <br/>
+            <a class="youtube" href="https://www.youtube.com/channel/UCy6EhA3WZWnFjB91wJbBozQ">Мой youtube канал</a>
+
+       
+      </div>
+    </div> 
+
+
+    </div> 
+
+
+
+
+
+<h3 class="title">NinaGra приветствует тебя на своей страничке! </h3>
+<div class="background">
+<router-outlet></router-outlet>    
+</div>
+
+
+</h2>
+</div>
+

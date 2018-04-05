@@ -1,0 +1,69 @@
+<div style="text-align:center">
+    <h3>
+        Здесь вы можете найти все мои статьи
+    </h3>
+
+
+
+    <!-- <p *showItStandard="['iphone','ipad']">I'll show you if I'm a iPhone or ipad device.</p>
+    <p *isIphone>I'll show you if I'm a iPhone device.</p>
+    <p *isChrome>I'll show you if I'm a chrome browser.</p>
+    <p *xl>I'll show you if I'm a xl screen size.</p>
+    <p *lg>I'll show you if I'm a lg screen size.</p>
+    <p *md>I'll show you if I'm a md screen size.</p>
+    <p *sm>I'll show you if I'm a sm screen size.</p>
+    <p *xs>I'll show you if I'm a xs screen size.</p> -->
+
+    <p *showItDevice="['mobile','tablet']"></p>
+    <div *showItDevice="['desktop']">
+
+
+
+
+
+
+
+    </div>
+
+
+</div>
+<input  (keydown.control.i)="showUpload(); $event.preventDefault()" (keydown.control.c)="closeUpload(); $event.preventDefault()" readonly>
+  
+
+
+<div *ngIf="pressed">
+
+    <input type="file" id="file" (change)="uploadFile($event)">
+    <button (click)="loadArticle()"> Добавить статью </button>
+    <br>
+
+    <textarea name="title" class="input" [(ngModel)]='title' cols='100%' [style.height.px]=30 placeholder="Название статьи">  </textarea>
+    <br>
+    <textarea name="input" class="input" [(ngModel)]='article' cols='100%' [style.height.px]=100 placeholder="Содержание статьи">  </textarea>
+
+</div>
+
+
+
+<div chAccoridon #firstAccordion="accordion" onlyOneOpen="false">
+
+
+    <div>
+        <ul>
+            <li class="text" *ngFor="let item of items |async">
+
+                <panel title='{{(item)?.title}}'>
+
+                    <!-- <div>{{(item)?.title }} </div> -->
+                    <br> {{(item)?.content}}
+
+                </panel>
+            </li>
+        </ul>
+
+
+
+
+    </div>
+
+</div>

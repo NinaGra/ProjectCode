@@ -1,0 +1,50 @@
+
+
+.input{
+    background: powderblue;
+
+}
+
+.anekdot {
+    background-image: url("../../assets/background.jpg");
+      background-color: rgb(102, 148, 205);
+      background-size: 100%,100%, contain; 
+      background-blend-mode: color-dodge;
+ 
+    overflow:auto; 
+}
+
+
+
+
+.input{
+    background: rgb(237, 229, 192);
+
+}
+
+.anekdot {
+    background-image: url("../../assets/background.jpg");
+      background-color: rgb(175, 195, 218);
+      background-size: 100%,100%, contain; 
+      background-blend-mode: color-dodge;
+      background-repeat: no-repeat; 
+ 
+    overflow:auto; 
+}
+
+
+.title{
+
+    text-align: center; 
+    font-weight: bold;
+}
+
+.body{
+
+    text-align: left; 
+    background-color: rgb(158, 189, 225);
+}
+
+ul {
+    list-style-type: none;
+  }

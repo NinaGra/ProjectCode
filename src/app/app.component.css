@@ -1,0 +1,158 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+    padding-left: 70px;
+
+  
+  }
+  
+  .content {   
+  
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url("../assets/background.jpg");
+    background-color: rgb(103, 150, 164);
+    background-size: 100%,100%, contain; 
+    background-blend-mode: screen;
+
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background-repeat: no-repeat;        
+      overflow-y:auto;   
+    
+  }
+
+
+
+  div::-webkit-scrollbar {
+    width: 122px;
+    }
+
+  .a {
+    text-align: left;
+     -webkit-text-fill-color: orangered; 
+     border:5px solid rgb(20, 179, 3);
+     border-color: rgb(213, 51, 51);
+     z-index: 2; 
+  }
+  a:hover {
+    outline: none !important;
+    border:3px solid rgb(118, 200, 113);    
+    border-color: rgb(223, 184, 66);
+    z-index: 2; 
+  }
+
+a.link:hover {
+  outline: none !important;
+  border:3px solid rgb(118, 200, 113);
+  border-color: rgb(223, 184, 66);
+  -webkit-animation: background 5s cubic-bezier(1,0,0,1) infinite;
+  animation: background 5s cubic-bezier(1,0,0,1) infinite;  
+  z-index: 2; 
+}
+  
+a.link{
+  border:3px solid rgb(20, 179, 3);
+  border-color: rgb(171, 223, 66);
+  z-index: 2; 
+
+}
+
+
+
+
+@-webkit-keyframes background {
+  0% { background-color: #f99; }
+  33% { background-color: #9f9; }  
+  67% { background-color: rgb(181, 181, 201); }
+  100% { background-color: #f99; }
+}
+
+@keyframes background {
+  0% { background-color: rgb(197, 223, 174); }
+  33% { background-color: #9f9; }  
+  67% { background-color: rgb(185, 185, 222); }
+  100% { background-color: rgb(237, 86, 86); }
+}
+  
+  .menu{
+    color: rgb(3, 9, 58);
+    height: 30px;
+    width: 50px; 
+    background-color: rgb(183, 176, 104); 
+    position:relative; 
+    z-index: 2; 
+    
+  }
+
+  .nav {
+    background:rgb(155, 165, 244); 
+  }
+
+  ul.nav {
+    background-color: rgb(226, 232, 225); 
+  }
+
+  .search {
+    height: 20px;
+    border: 3px solid #73AD21;
+    background-image: url("../assets/search.jpeg");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0px;    
+    background-position: right;
+  }
+
+  .title {
+    background-color: rgb(211, 216, 146);    
+    text-align: center;
+    background-size: auto;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 2; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #68a5b7;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+   
+    color:red; 
+  border:3px solid rgb(20, 179, 3);
+  border-color: rgb(171, 223, 66);
+  -webkit-animation: background 5s cubic-bezier(1,0,0,1) infinite;
+  animation: background 5s cubic-bezier(1,0,0,1) infinite;  
+  z-index: 2; 
+    }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: fixed; 
+    width: 30%;
+    z-index: 2; 
+}
+ 
+
+::-webkit-scrollbar {
+  width: 200px;
+  height: 100%; 
+}
+::-webkit-scrollbar-button {
+  background: #ccc;
+}
+::-webkit-scrollbar-track-piece {
+  background: #888;
+}

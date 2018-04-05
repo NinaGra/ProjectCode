@@ -1,0 +1,38 @@
+
+
+.input{
+    background: powderblue;
+
+}
+
+.anekdot {
+    background-image: url("../../assets/background.jpg");
+      background-color: rgb(175, 195, 218);
+      background-size: 100%,100%, contain; 
+      background-blend-mode: color-dodge;
+ 
+    overflow:auto; 
+}
+
+
+.title{
+
+    text-align: center; 
+    font-weight: bold;
+}
+
+.body{
+
+    text-align: left; 
+    background-color: rgb(158, 189, 225);
+}
+
+ul {
+    list-style-type: none;
+  }
+
+  .delete{
+      color: red; 
+     
+       z-index: 1;
+  }

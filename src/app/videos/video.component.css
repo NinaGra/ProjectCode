@@ -1,0 +1,42 @@
+
+
+@keyframes pound {
+	from { transform: none; }
+	50% { transform: scale(1.4); }
+	to { transform: none; }
+}
+
+
+
+.anekdot{
+    text-align: center;
+    color: rgb(120,33,3);
+    animation: pound 5s infinite;
+
+   
+}
+
+.anekdotBody {
+    text-align: center;
+    color: rgb(43, 152, 191); 
+
+}
+
+textarea {
+    background-image: url("../../assets/background.jpg");
+      background-color: rgb(169, 193, 208);
+      background-size: 100%,100%, contain; 
+      background-blend-mode: color-dodge;
+ 
+    overflow:auto; 
+ 
+}
+
+ul {
+    list-style-type: none;
+  }
+
+
+  audio { 
+    display:none;
+ }

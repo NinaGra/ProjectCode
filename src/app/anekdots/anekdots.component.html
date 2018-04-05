@@ -1,0 +1,86 @@
+<div style="text-align:center">
+    <h3>
+        Здесь вы можете найти анекдоты
+    </h3>
+
+
+
+    <!-- <p *showItStandard="['iphone','ipad']">I'll show you if I'm a iPhone or ipad device.</p>
+    <p *isIphone>I'll show you if I'm a iPhone device.</p>
+    <p *isChrome>I'll show you if I'm a chrome browser.</p>
+    <p *xl>I'll show you if I'm a xl screen size.</p>
+    <p *lg>I'll show you if I'm a lg screen size.</p>
+    <p *md>I'll show you if I'm a md screen size.</p>
+    <p *sm>I'll show you if I'm a sm screen size.</p>
+    <p *xs>I'll show you if I'm a xs screen size.</p> -->
+
+    <p *showItDevice="['mobile','tablet']"></p>
+    <div *showItDevice="['desktop']">
+    </div>
+
+
+</div>
+
+<div *ngIf="sent">
+
+    message sent
+</div>
+
+<input type="file" id="file" (change)="uploadFile($event)">
+<button (click)="loadArticle()"> Добавить анекдот </button>
+<br>
+
+<!-- <textarea name="title" class="input" [(ngModel)]='title' cols='100%' [style.height.px]=30 placeholder="Тема">  </textarea> -->
+<br>
+<textarea name="input" class="input" [(ngModel)]='anekdot' cols='100%' [style.height.px]=100 placeholder="Содержание">  </textarea>
+
+
+
+<input (keydown.control.d)="setActiveState(); $event.preventDefault()" (keydown.control.c)="cancel(); $event.preventDefault()">
+<div class="delete" *ngIf="deletedActive" placeholder="items to remove">
+    <br/> Now you can remove items.
+    <p> Выберите объекты, которые желаете удалить!</p>
+</div>
+
+<div>
+
+    <ul>
+        <!-- <panel title="Анекдоты"> -->
+        <li class="text" *ngFor="let item of items  | async | reverse ; let i = index ">
+            <!-- <panel title='{{(item)?.title}}'>               -->
+            <div *ngIf="item?.title!='anekdotImage'" (click)="deleteItem(i)">
+                <div> **********************************
+                    <br/>{{item?.content}}
+                </div>
+            </div>
+            <div *ngIf="item?.title=='anekdotImage'" (click)="deleteItem(i)">
+                <div> **********************************</div>
+                <img [src]="item?.content" alt="" height="30%" width="40%">
+            </div>
+
+
+            <div *ngIf="item?.title=='anekdotWord'" (click)="deleteItem(i)">
+                <!-- <div (click)="getUrl(i)"> ********************************** </div> -->
+                <br/>
+                <div id='ref' href='' (click)="getUrl(i)"> {{url}} </div>
+
+            </div>
+
+        </li>
+        <!-- </panel> -->
+
+        <!-- <panel title="Смешные картинки">
+            <div class="text" *ngFor="let item of items | async | reverse;  let i = index  ">
+
+                <div *ngIf="item?.title=='anekdotImage'" (click)="deleteItem(i)">
+                    <div> **********************************</div>
+                    <img [src]="item?.content" alt="" height="30%" width="40%">
+                </div>
+                <br/>
+            </div>
+        </panel> -->
+
+    </ul>
+
+
+</div>

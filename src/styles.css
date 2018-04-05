@@ -1,0 +1,23 @@
+  
+  li {
+    display: inline;
+    padding-left: 70px;
+
+  
+  }
+
+  @-webkit-keyframes background {
+    0% { background-color: #f99; }
+    33% { background-color: #9f9; }  
+    67% { background-color: rgb(181, 181, 201); }
+    100% { background-color: #f99; }
+  }
+  
+  @keyframes background {
+    0% { background-color: rgb(197, 223, 174); }
+    33% { background-color: #9f9; }  
+    67% { background-color: rgb(185, 185, 222); }
+    100% { background-color: rgb(237, 86, 86); }
+  }
+
+
